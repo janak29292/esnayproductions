@@ -1,0 +1,27 @@
+<header id="home">
+    <!-- sticky menu -->
+    <div class="stick-wrapper">
+        <div class="sticky clear">
+            <div class="grid-row">
+                <img class="splash" src="img/splash.png" alt="">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt=""></a>
+                </div>
+                <nav class="nav">
+                    <a href="#" class="switcher">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <ul class="clear">
+                        <li><a href={% url 'home' %} {% if request.resolver_match.url_name == 'home' %} class="active-link" {% endif %}>Home</a></li>
+                        <li><a href={% url 'about' %} {% if request.resolver_match.url_name == 'about' %} class="active-link" {% endif %}>About</a></li>
+                        <li><a href={% url 'team' %} {% if request.resolver_match.url_name == 'team' %} class="active-link" {% endif %}>Team</a></li>
+                        <li><a href={% url 'portfolio' %} {% if request.resolver_match.url_name == 'portfolio' %} class="active-link" {% endif %}>Portfolio</a></li>
+                        <li><a href={% url 'blog' %} {% if request.resolver_match.url_name == 'blog' %} class="active-link" {% endif %}>Blog</a></li>
+                        <li class="last"><a href={% url 'contact' %} {% if request.resolver_match.url_name == 'contact' %} class="active-link" {% endif %}>Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!--/ sticky menu -->
+</header>

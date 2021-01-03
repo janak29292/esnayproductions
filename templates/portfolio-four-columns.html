@@ -1,0 +1,232 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    <title>Portfolio</title>
+{% endblock  %}
+
+{% block style %}
+    <link rel="stylesheet" href={% static "css/main.css" %}>
+    <link rel="stylesheet" href={% static "css/jquery.owl.carousel.css" %}>
+    <link rel="stylesheet" href={% static "css/font-awesome.css" %}>
+    <link rel="stylesheet" href={% static "css/animate.css" %}>
+{% endblock  %}
+
+{% block bodyclass %}
+    class="portfolio-columns four pc"
+{% endblock %}
+
+{% block content %}
+  <div class="top-bg">
+    
+    <img src="img/splash-top.png" class="splash-top" alt>
+    <div class="page-title zoomIn animated">portfolio</div>
+  </div>
+  <!-- page content -->
+  <section id="portfolio" class="portfolio">
+    <div class="grid-row">
+      <div class="portfolio-filter clear">
+        <div class="title">
+          <a href="#" class="all-iso-item active" data-filter=".item">ALL</a>
+          <span class="main-title">PORTFOLIO</span>
+          <span class="slash-icon">/</span>
+          <a href="#" data-filter=".photo">PHOTGRAPHY</a>
+          <a href="#" data-filter=".design">DESIGN</a>
+          <a href="#" data-filter=".video">VIDEO</a>
+          <a href="#" data-filter=".web">WEB</a>
+          <a href="#" data-filter=".music">MUSIC</a>
+        </div>
+      </div>
+    </div>
+    <div class="grid-row">
+      <div class="grid-col-row">
+        <div class="isotope">
+          <div class="item photo">
+            <div class="portfolio-hover">
+              <div class="portfolio-info">
+                <a href=""><div class="portfolio-title">Future timeline</div></a>
+                <div class="portfolio-divider"></div>
+                <div class="portfolio-description">Business, Art</div>
+              </div>
+            </div>
+            <img src="images/portfolio_three/four-columns-1.jpg" alt>
+          </div>
+          <div class="item illust ">
+            <div class="portfolio-hover">
+              <div class="portfolio-info">
+                <a href=""><div class="portfolio-title">Sit Amet</div></a>
+                <div class="portfolio-divider"></div>
+                <div class="portfolio-description">Business, Art</div>
+              </div>
+            </div>
+            <img src="images/portfolio_three/four-columns-2.jpg" alt>
+          </div>
+          <div class="item photo illust">
+            <div class="portfolio-hover">
+              <div class="portfolio-info">
+                <a href=""><div class="portfolio-title">Sed Laoreete</div></a>
+                <div class="portfolio-divider"></div>
+                <div class="portfolio-description">Video, Photography</div>
+              </div>
+            </div>
+            <img src="images/portfolio_three/four-columns-3.jpg" alt>
+          </div>
+          <div class="item design video music">
+            <div class="portfolio-hover">
+              <div class="portfolio-info">
+                <a href=""><div class="portfolio-title">Amet Interdum</div></a>
+                <div class="portfolio-divider"></div>
+                <div class="portfolio-description">Music, Art</div>
+              </div>
+            </div>
+            <img src="images/portfolio_three/four-columns-4.jpg" alt>
+          </div>
+          <div class="item illust music">
+            <div class="portfolio-hover">
+              <div class="portfolio-info">
+                <a href=""><div class="portfolio-title">Cras varius</div></a>
+                <div class="portfolio-divider"></div>
+                <div class="portfolio-description">Photography, Art</div>
+              </div>
+            </div>
+            <img src="images/portfolio_three/four-columns-5.jpg" alt>
+          </div>
+          <div class="item design video web">
+            <div class="portfolio-hover">
+              <div class="portfolio-info">
+                <a href=""><div class="portfolio-title">Maecenas Semper</div></a>
+                <div class="portfolio-divider"></div>
+                <div class="portfolio-description">Business, Art</div>
+              </div>
+            </div>
+            <img src="images/portfolio_three/four-columns-6.jpg" alt>
+          </div>
+          <div class="item">
+            <div class="portfolio-hover">
+              <div class="portfolio-info">
+                <a href=""><div class="portfolio-title">Scelerisque Venen</div></a>
+                <div class="portfolio-divider"></div>
+                <div class="portfolio-description">Music, Art</div>
+              </div>
+            </div>
+            <img src="images/portfolio_three/four-columns-7.jpg" alt>
+          </div>
+          <div class="item">
+            <div class="portfolio-hover">
+              <div class="portfolio-info">
+                <a href=""><div class="portfolio-title">Libero Luctus</div></a>
+                <div class="portfolio-divider"></div>
+                <div class="portfolio-description">Music, Art</div>
+              </div>
+            </div>
+            <img src="images/portfolio_three/four-columns-8.jpg" alt>
+          </div>
+          <div class="item">
+            <div class="portfolio-hover">
+              <div class="portfolio-info">
+                <a href=""><div class="portfolio-title">Dlandit Cursus</div></a>
+                <div class="portfolio-divider"></div>
+                <div class="portfolio-description">Business, Art</div>
+              </div>
+            </div>
+            <img src="images/portfolio_three/four-columns-9.jpg" alt>
+          </div>
+          <div class="item">
+            <div class="portfolio-hover">
+              <div class="portfolio-info">
+                <a href=""><div class="portfolio-title">Future timeline</div></a>
+                <div class="portfolio-divider"></div>
+                <div class="portfolio-description">Business, Art</div>
+              </div>
+            </div>
+            <img src="images/portfolio_three/four-columns-10.jpg" alt>
+          </div>
+          <div class="item">
+            <div class="portfolio-hover">
+              <div class="portfolio-info">
+                <a href=""><div class="portfolio-title">Quisque non</div></a>
+                <div class="portfolio-divider"></div>
+                <div class="portfolio-description">Business, Art</div>
+              </div>
+            </div>
+            <img src="images/portfolio_three/four-columns-11.jpg" alt>
+          </div>
+          <div class="item">
+            <div class="portfolio-hover">
+              <div class="portfolio-info">
+                <a href=""><div class="portfolio-title">Sed Tempor</div></a>
+                <div class="portfolio-divider"></div>
+                <div class="portfolio-description">Music, Photography</div>
+              </div>
+            </div>
+            <img src="images/portfolio_three/four-columns-12.jpg" alt>
+          </div>
+          <div class="item">
+            <div class="portfolio-hover">
+              <div class="portfolio-info">
+                <a href=""><div class="portfolio-title">Tristique vitae</div></a>
+                <div class="portfolio-divider"></div>
+                <div class="portfolio-description">Business, Art</div>
+              </div>
+            </div>
+            <img src="images/portfolio_three/four-columns-13.jpg" alt>
+          </div>
+          <div class="item">
+            <div class="portfolio-hover">
+              <div class="portfolio-info">
+                <a href=""><div class="portfolio-title">Molestie augue</div></a>
+                <div class="portfolio-divider"></div>
+                <div class="portfolio-description">Business, Art</div>
+              </div>
+            </div>
+            <img src="images/portfolio_three/four-columns-14.jpg" alt>
+          </div>
+          <div class="item">
+            <div class="portfolio-hover">
+              <div class="portfolio-info">
+                <a href=""><div class="portfolio-title">Cras sit</div></a>
+                <div class="portfolio-divider"></div>
+                <div class="portfolio-description">Music, Video</div>
+              </div>
+            </div>
+            <img src="images/portfolio_three/four-columns-15.jpg" alt>
+          </div>
+          <div class="item">
+            <div class="portfolio-hover">
+              <div class="portfolio-info">
+                <a href=""><div class="portfolio-title">Future timeline</div></a>
+                <div class="portfolio-divider"></div>
+                <div class="portfolio-description">Business, Art</div>
+              </div>
+            </div>
+            <img src="images/portfolio_three/four-columns-16.jpg" alt>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ page content -->
+  <!-- subscribe -->
+  <div class="subscribe">
+    <div class="grid-row clear">
+      <div class="them-mask"></div>
+      <div class="subscribe-header">subscribe</div>
+      <form action="#" class="clear">
+        <input type="email" placeholder="Your Email Address">
+        <button type="submit" class="button-send">Send</button>
+      </form>
+    </div>
+  </div>
+  <!--/ subscribe -->
+{% endblock  %}
+
+
+{% block scripts %}
+  <script type="text/javascript" src={% static "http://maps.google.com/maps/api/js?sensor=false" %}></script>
+  <script type="text/javascript" src={% static "http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox_packed.js" %}></script>
+  <script src={% static "js/jquery.min.js" %}></script>
+  <script src={% static "js/jquery.isotope.min.js" %}></script>
+  <script src={% static "js/jquery.owl.carousel.js" %}></script>
+  <script src={% static "js/wow.min.js" %}></script>
+  <script src={% static "js/main.js" %}></script>
+  <script src={% static "js/retina.min.js" %}></script>
+{% endblock %}

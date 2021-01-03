@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+    <head>
+        {% block title %}
+        {% endblock  %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+        <!--styles -->
+        {% block style %}
+        {% endblock %}
+        <!--styles -->
+    </head>
+    <body {% block bodyclass %}{% endblock %}>
+        {% block banner %}
+        {% endblock %}
+        <!-- page header -->
+            {% include "components/header.html" %}
+        <!--/ pade header -->
+        {% block content %}
+        {% endblock %}
+            <!-- page footer -->
+                {% include "components/footer.html" %}
+            <!--/ page footer -->
+            <a href="#" id="scroll-top" class="scroll-top"><i class="fa fa-angle-up"></i></a>
+            <!-- scripts -->
+            {% block scripts %}
+            {% endblock %}
+            <!--/ scripts -->
+    </body>
+</html> 
