@@ -1,0 +1,70 @@
+{% load static %}
+<section id="blog"  class="padding-section">
+    <div class="blog-head">
+        <div class="grid-row">
+            <div class="grid-col-row clear position">
+                <div class="grid-col">
+                    <div class="title">
+                        <span class="main-title">BLOG</span>
+                        <span class="slash-icon">/</span><br/>
+                        LATEST FROM<br/>OUR BLOG
+                    </div>
+                </div>
+                {% comment %} <div class="grid-col grid-col-8 clear bottom">
+                    <div class="years"><a href="blog-fullwidth.html">2016</a></div>
+                    <div class="slash">/</div>
+                    <div class="years"><a href="blog-fullwidth.html">2015</a></div>
+                    <div class="slash">/</div>
+                    <div class="years"><a href="blog-fullwidth.html">2014</a></div>
+                </div> {% endcomment %}
+            </div>
+        </div>
+    </div>
+    <div class="blog-content">
+        <div class="grid-row">
+            <div class="blog">
+                {% for blog in blogs %}
+                    <div class="item clear">
+                        <div class="date-round">
+                            <div class="date-mounth">
+                                <span>{{ blog.date_created|date:"m" }}</span><p>{{ blog.date_created|date:"M" }}</p>
+                            </div>
+                        </div>
+                        <div class="media-block {% cycle 'left' 'right' %}-block">
+                            {% if blog.show_video or blog.show_image %}
+                                <img id="splash-4" src={% static "img/splash-4.png" %} alt>
+                            {% endif %}
+                            {% if blog.show_image %}
+                            <div class="picture">
+                                <img src={{ blog.image.url }} alt>
+                                <div class="canvas">
+                                    <div class="grad"></div>
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% if blog.show_video %}
+                                <div class="video-player">
+                                    <iframe src={{ blog.video }}></iframe>
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="item-header">
+                            <h2>{{ blog.title }}</h2>
+                        </div>
+                        <div class="content">
+                            <p>{{ blog.description }}</p>
+                        </div>
+                        <div class="post-info clear">
+                            <span><i class="fa fa-calendar"></i>> {{ blog.date_created|date:"j F, Y" }}</span>
+                            {% comment %} <span><i class="fa fa-edit"></i> Admin</span>
+                            <span><i class="fa fa-comment"></i> 2 Coments</span>
+                            <span><i class="fa fa-bookmark"></i> Audio</span>
+                            <a class="button" href="#">/ READ MORE</a> {% endcomment %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

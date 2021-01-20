@@ -1,0 +1,36 @@
+{% load static %}
+<section id="portfolio" class="portfolio padding-section">
+    <div class="grid-row">
+        <div class="portfolio-filter clear">
+            <div class="title">
+                <a href="#" class="all-iso-item active" data-filter=".item">ALL</a>
+                <span class="main-title">PORTFOLIO</span>
+                <span class="slash-icon">/</span>
+                {% for category in categories %}
+                    <a href="#" data-filter=".{{ category.data_filter }}">{{ category.name|upper }}</a>
+                {% endfor %}    
+            </div>
+            
+        </div>
+    </div>
+    <div class="isotope">
+    {% for portfolio in portfolios %}
+        <div class="item {% for category in portfolio.category.all %}{{ category.data_filter }}{% endfor %}">
+            <div class="portfolio-hover">
+                <div class="portfolio-info">
+                    <a href={% url 'portfolio_detail' pk=portfolio.id %}><div class="portfolio-title">{{ portfolio.title }}</div></a>
+                    <div class="portfolio-divider"></div>
+                    <div class="portfolio-description">{% for category in portfolio.category.all %}{{ category.name }}{% endfor %}</div>
+                </div>
+            </div>
+            {% with portfolio.images.all|first as first_object %}
+              {% if first_object %}
+                <img src={{ first_object.image.url }} alt>
+              {% else %}
+                <img src={% static "images/portfolio_three/four-columns-1.jpg" %} alt>
+              {% endif %}
+            {% endwith %}
+        </div>
+     {% endfor %}
+    </div>
+</section>

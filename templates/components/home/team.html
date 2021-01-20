@@ -1,0 +1,63 @@
+{% load static %}
+<section id="team" class="our-team padding-section">
+    <div class="grid-row">
+        <div class="grid-col-row clear">
+            <div class="grid-col grid-col-6 col-sd-12">
+                <div class="title">
+                    <span class="main-title">OUR TEAM</span>
+                    <span class="slash-icon">/</span><br/>WE ARE THE BEST
+                </div>
+                <dl>
+                    <dt>Suspendisse interdum tortor augue, in tempus urna ultricies</dt>
+                        <dd>Vivamus fringilla eu nisl non laoreet.Maecenas ac velit condimentum, condimentum ante at, sodales justo. Vivamus suscipit nunc ut condimentum feugiat. Praesent imperdiet sollicitudin pulvinar. Pellentesque interdum sem a ligula scelerisque bibendum. Donec aliquam mattis neque quis pretium pellentesque </dd>
+                </dl>
+                <br />
+                <div class="carousel-nav">
+                    <div class="carousel-button">
+                        <div class="prev"><i class="fa fa-chevron-left"></i></div>
+                        <div class="next"><i class="fa fa-chevron-right"></i></div>
+                    </div>
+                    <div class="carousel-line"></div>
+                </div>
+                    <div id="tabs-carousel" class="owl-carousel choose-team">
+                        {% for player in team %}
+                            <div class="team-item">
+                                <div class="border-img">
+                                    <a id="tab{{ player.id }}" {% if player.id == team.0.id %} class="active" {% endif %} >
+                                        <div class="window-tabs"><div class="overflow-block"></div><img style="height: 100%;" src={{ player.image.url }} alt></div>
+                                    </a>
+                                </div>
+                                <h2>{{ player.name }}</h2>
+                                <p>{{ player.position }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                
+            </div>
+            <div class="grid-col grid-col-6 col-sd-12">
+                <div class="border-img">
+                    <div class="window-tabs big-window-tab">
+                        <div class="choose-team">
+                        {% for player in team %}
+                            <div id="con_tab{{ player.id }}" {% if player.id == team.0.id %} class="active" {% endif %} >
+                                <div class="overflow-block">
+                                    <div class="inform-item">
+                                        <div class="item-name">{{ player.name }}<br/><p>{{ player.position }}</p></div><p>{{ player.description }}</p>
+                                        {% comment %} <div class="social-person clear">
+                                            <div class="circle"><a href="#"><i class="fa fa-twitter"></i></a></div>
+                                            <div class="circle"><a href="#"><i class="fa fa-facebook"></i></a></div>
+                                            <div class="circle"><a href="#"><i class="fa fa-skype"></i></a></div>
+                                        </div> {% endcomment %}
+                                    </div>
+                                </div>
+                                <img style="height: 100%;" src={{ player.image.url }} alt>
+                            </div>
+                        {% endfor %}
+                        </div>
+                    </div>
+                    <img id="splash-3" src={% static "img/splash-3.png" %} alt>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,13 +1,14 @@
+{% load static %}
 <div class="tp-banner-container">
     <div class="tp-banner">
         <ul>
             <li>
-                <img src="images/slider/first-slide.jpg" alt>
+                <img src={% static "images/slider/first-slide.jpg" %} alt>
                 <div class="tp-caption  sft sl-title" data-x="center" data-y="center" data-voffset="-90" data-speed="700" data-start="1700" data-easing="easeOutBack">splashes</div>
                 <p class="tp-caption sfb" data-x="center" data-y="center" data-voffset="40" data-speed="500" data-start="1900" data-easing="easeOutBack">crafted</p>
                </li>
                <li>
-    <div class="tp-caption sft customout tp-videolayer fullscreenvideo"
+                <div class="tp-caption sft customout tp-videolayer fullscreenvideo"
                     data-x="center" data-hoffset="134"
                     data-y="center" data-voffset="-6"
                     data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:5;scaleY:5;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
@@ -17,7 +18,7 @@
                     data-easing="Power4.easeOut"
                     data-endspeed="500"
                     data-endeasing="Power4.easeOut"
-                    data-videoposter="images/slider/second-slide.jpg"
+                    data-videoposter={% static "images/slider/second-slide.jpg" %}
                     data-autoplay="false"
                     data-autoplayonlyfirsttime="false"
                     data-nextslideatend="false"
@@ -30,13 +31,13 @@
                 <p class="tp-caption sfb" data-x="center" data-y="center" data-voffset="40" data-speed="500" data-start="1900" data-easing="easeOutBack">superb</p>
                </li>
                <li>
-                <img src="images/slider/third-slide.jpg" alt>
+                <img src={% static "images/slider/third-slide.jpg" %} alt>
                 <div class="tp-caption sft sl-title" data-x="center" data-y="center" data-voffset="-90" data-speed="700" data-start="1700" data-easing="easeOutBack">square</div>
                 <p class="tp-caption sfb" data-x="center" data-y="center" data-voffset="40" data-speed="500" data-start="1900" data-easing="easeOutBack">pixels</p>
                </li>
         </ul>
         <div class="scroll-down-button">
-            <img src="images/down-button.png" class="down-button" alt>
+            <img src={% static "images/down-button.png" %} class="down-button" alt>
             <i class="fa fa-angle-down"></i>
         </div>
     </div>

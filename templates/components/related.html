@@ -1,0 +1,50 @@
+{% load static %}
+<div class="related-projects">
+    <div class="title">
+        <span class="main-title">RELATED PROJECTS</span>
+        <span class="slash-icon">/<i class="fa fa-angle-double-right"></i></span>
+    </div>
+    <div class="grid-col-row">
+        <div id="project-carousel" class="owl-carousel">
+            <div class="project-item picture">
+                {% with portfolio.images.all|first as first_object %}
+                    {% if first_object %}
+                        <img src={{ first_object.image.url }} alt>
+                    {% else %}
+                        <img src={% static "images/portfolio_three/four-columns-1.jpg" %} alt>
+                    {% endif %}
+                {% endwith %}
+                <div class="portfolio-hover">
+                    <div class="portfolio-info">
+                        <a href={% url 'portfolio_detail' pk=portfolio.id %}><div class="portfolio-title">{{ portfolio.title }}</div></a>
+                        <div class="portfolio-divider"></div>
+                        <div class="portfolio-description">{% for category in portfolio.category.all %}{{ category.name }}{% endfor %}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-item picture">
+                {% with portfolio.images.all|first as first_object %}
+                    {% if first_object %}
+                        <img src={{ first_object.image.url }} alt>
+                    {% else %}
+                        <img src={% static "images/portfolio_three/four-columns-1.jpg" %} alt>
+                    {% endif %}
+                {% endwith %}
+                <div class="portfolio-hover">
+                    <div class="portfolio-info">
+                        <a href={% url 'portfolio_detail' pk=portfolio.id %}><div class="portfolio-title">{{ portfolio.title }}</div></a>
+                        <div class="portfolio-divider"></div>
+                        <div class="portfolio-description">{% for category in portfolio.category.all %}{{ category.name }}{% endfor %}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-nav">
+        <div class="carousel-button">
+            <div class="prev"><i class="fa fa-chevron-left"></i></div>
+            <div class="next"><i class="fa fa-chevron-right"></i></div>
+        </div>
+        <div class="carousel-line"></div>
+    </div>
+</div>

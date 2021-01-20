@@ -14,9 +14,8 @@
     class="page-about pc"
 {% endblock %}
 {% block content %}
-	<div class="top-bg">
-		
-    	<img src="img/splash-top.png" class="splash-top" alt>
+	<div class="top-bg">	
+    	<img src={% static "img/splash-top.png" %} class="splash-top" alt>
 		<div class="page-title zoomIn animated">about us</div>
 	</div>
 	<!-- page content -->
@@ -37,7 +36,7 @@
 						</dl>
 				</div>
 				<div class="grid-col grid-col-6 col-sd-12 fullwidth-img">
-					<img src="images/about/ipad3.png" alt>
+					<img src={% static "images/about/ipad3.png" %} alt>
 				</div>
 			</div>
 		</div>
@@ -77,7 +76,7 @@
 	</section>
 	<section class="innovation parallaxed">
 		<div class="parallax-image" data-parallax-left="0.5" data-parallax-top="0.3" data-parallax-scroll-speed="0.5">
-			<img src="images/about/parallax-about-2.jpg" alt="">
+			<img src={% static "images/about/parallax-about-2.jpg" %} alt="">
 		</div>
 		<div class="grid-row">
 			<div class="parallax-content-third">
@@ -93,7 +92,7 @@
 									<div class="client-icon">
 										<div class="border-img">
 											<a href="team.html"><div class="window-tabs">
-												<div class="overflow-block"></div><img src="images/team/img-team-2.jpg" alt></div>
+												<div class="overflow-block"></div><img src={% static "images/team/img-team-2.jpg" %} alt></div>
 											</a>
 										</div>
 									</div>
@@ -104,7 +103,7 @@
 									<div class="client-icon">
 										<div class="border-img">
 											<a href="team.html"><div class="window-tabs">
-												<div class="overflow-block"></div><img src="images/team/img-team-1.jpg" alt></div>
+												<div class="overflow-block"></div><img src={% static "images/team/img-team-1.jpg" %} alt></div>
 											</a>
 										</div>
 									</div>
@@ -115,7 +114,7 @@
 									<div class="client-icon">
 										<div class="border-img">
 											<a href="team.html"><div class="window-tabs">
-												<div class="overflow-block"></div><img src="images/team/img-team-6.jpg" alt></div>
+												<div class="overflow-block"></div><img src={% static "images/team/img-team-6.jpg" %} alt></div>
 											</a>
 										</div>
 									</div>
@@ -128,7 +127,7 @@
 									<div class="client-icon">
 										<div class="border-img">
 											<a href="team.html"><div class="window-tabs">
-												<div class="overflow-block"></div><img src="images/team/img-team-9.jpg" alt></div>
+												<div class="overflow-block"></div><img src={% static "images/team/img-team-9.jpg" %} alt></div>
 											</a>
 										</div>
 									</div>
@@ -139,7 +138,7 @@
 									<div class="client-icon">
 										<div class="border-img">
 											<a href="team.html"><div class="window-tabs">
-												<div class="overflow-block"></div><img src="images/team/img-team-8.jpg" alt></div>
+												<div class="overflow-block"></div><img src={% static "images/team/img-team-8.jpg" %} alt></div>
 											</a>
 										</div>
 									</div>
@@ -150,7 +149,7 @@
 									<div class="client-icon">
 										<div class="border-img">
 											<a href="team.html"><div class="window-tabs">
-												<div class="overflow-block"></div><img src="images/team/img-team-7.jpg" alt></div>
+												<div class="overflow-block"></div><img src={% static "images/team/img-team-7.jpg" %} alt></div>
 											</a>
 										</div>
 									</div>
@@ -163,7 +162,7 @@
 									<div class="client-icon">
 										<div class="border-img">
 											<a href="team.html"><div class="window-tabs">
-												<div class="overflow-block"></div><img src="images/team/img-team-5.jpg" alt></div>
+												<div class="overflow-block"></div><img src={% static "images/team/img-team-5.jpg" %} alt></div>
 											</a>
 										</div>
 									</div>
@@ -174,7 +173,7 @@
 									<div class="client-icon">
 										<div class="border-img">
 											<a href="team.html"><div class="window-tabs">
-												<div class="overflow-block"></div><img src="images/team/img-team-4.jpg" alt></div>
+												<div class="overflow-block"></div><img src={% static "images/team/img-team-4.jpg" %} alt></div>
 											</a>
 										</div>
 									</div>
@@ -185,7 +184,7 @@
 									<div class="client-icon">
 										<div class="border-img">
 											<a href="team.html"><div class="window-tabs">
-												<div class="overflow-block"></div><img src="images/team/img-team-3.jpg" alt></div>
+												<div class="overflow-block"></div><img src={% static "images/team/img-team-3.jpg" %} alt></div>
 											</a>
 										</div>
 									</div>
@@ -278,10 +277,10 @@
 							<div class="hover-effect"></div>
 							<div class="link-cont">
 								<a href="blog-single-post.html" class="cws-slide-left fa fa-share-alt"></a>
-								<a href="images/about/img-about-1.jpg" class="fancy fa fa-search"></a>
+								<a href="images/about/img-about-1.jpg" %} class="fancy fa fa-search"></a>
 								<a href="blog-single-post.html" class="cws-slide-right fa fa-heart"></a>
 							</div>
-							<img src="images/about/img-about-1.jpg" alt="">
+							<img src={% static "images/about/img-about-1.jpg" %} alt="">
 						</div>
 						<h3>A LITTLE ABOUT US</h3>
 						<p>Pellentesque massa quam, pharetra sit amet odio vitae, ornare fermentum</p>
@@ -294,10 +293,10 @@
 							<div class="hover-effect"></div>
 							<div class="link-cont">
 								<a href="blog-single-post.html" class="cws-slide-left fa fa-share-alt"></a>
-								<a href="images/about/img-about-2.jpg" class="fancy fa fa-search"></a>
+								<a href="images/about/img-about-2.jpg" %} class="fancy fa fa-search"></a>
 								<a href="blog-single-post.html" class="cws-slide-right fa fa-heart"></a>
 							</div>
-							<img src="images/about/img-about-2.jpg" alt="">
+							<img src={% static "images/about/img-about-2.jpg" %} alt="">
 						</div>
 						<h3>CREATING CONNECTIONS</h3>
 						<p>Aenean laoreet non odio vel auctor. Quisque malesuada feugiat metus</p>
@@ -310,10 +309,10 @@
 							<div class="hover-effect"></div>
 							<div class="link-cont">
 								<a href="blog-single-post.html" class="cws-slide-left fa fa-share-alt"></a>
-								<a href="images/about/img-about-3.jpg" class="fancy fa fa-search"></a>
+								<a href="images/about/img-about-3.jpg" %} class="fancy fa fa-search"></a>
 								<a href="blog-single-post.html" class="cws-slide-right fa fa-heart"></a>
 							</div>
-							<img src="images/about/img-about-3.jpg" alt="">
+							<img src={% static "images/about/img-about-3.jpg" %} alt="">
 						</div>
 						<h3>FINGER ON THE PULSE</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam posuere dignissim</p>
@@ -326,10 +325,10 @@
 							<div class="hover-effect"></div>
 							<div class="link-cont">
 								<a href="blog-single-post.html" class="cws-slide-left fa fa-share-alt"></a>
-								<a href="images/about/img-about-4.jpg" class="fancy fa fa-search"></a>
+								<a href="images/about/img-about-4.jpg" %} class="fancy fa fa-search"></a>
 								<a href="blog-single-post.html" class="cws-slide-right fa fa-heart"></a>
 							</div>
-							<img src="images/about/img-about-4.jpg" alt="">
+							<img src={% static "images/about/img-about-4.jpg" %} alt="">
 						</div>
 						<h3>WE ALWAYS AHEAD</h3>
 						<p>Proin accumsan augue a risus laoreet, sed malesuada lacus faucibus.</p>

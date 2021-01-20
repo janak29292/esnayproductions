@@ -17,7 +17,7 @@
 
 {% block content %}
   <div class="top-bg">
-    <img src="img/splash-top.png" class="splash-top" alt>
+    <img src={% static "img/splash-top.png" %} class="splash-top" alt>
     <div class="page-title zoomIn animated">team</div>
   </div>
   <section id="team" class="">
@@ -28,6 +28,7 @@
     </div>
     <div class="grid-row large-team">
       <div class="grid-col-row clear">
+      {% for player in team %}
         <div class="grid-col grid-col-3">
           <div class="team-item">
             <div class="border-img">
@@ -35,235 +36,27 @@
                 <div class="overflow-block">
                   <div class="inform-item">
                     <div class="social-person clear">
-                      <a href="#" class="circle"><i class="fa fa-twitter"></i></a>
-                      <a href="#" class="circle"><i class="fa fa-facebook"></i></a>
-                      <a href="#" class="circle"><i class="fa fa-skype"></i></a>
+                      <p>
+                        {{ player.description }}
+                      </p>
                     </div>
                   </div>
-                </div><img src="images/team/img-team-1.jpg" alt>
+                </div>
+                <!-- <img src={% static "images/team/img-team-1.jpg" %} alt> -->
+                <img style="height: 100%;" src={{ player.image.url }} alt>
               </div>
             </div>
-            <h2>jacob doe</h2>
-            <p>development</p>
-        </div>
-      </div>
-      <div class="grid-col grid-col-3">
-        <div class="team-item">
-          <div class="border-img">
-            <div class="window-tabs">
-              <div class="overflow-block">
-                <div class="inform-item">
-                  <div class="social-person clear">
-                    <a href="#" class="circle"><i class="fa fa-twitter"></i></a>
-                    <a href="#" class="circle"><i class="fa fa-facebook"></i></a>
-                    <a href="#" class="circle"><i class="fa fa-skype"></i></a>
-                  </div>
-                </div>
-              </div><img src="images/team/img-team-2.jpg" alt>
-            </div>
+            <h2>{{ player.name }}</h2>
+            <p>{{ player.position }}</p>
           </div>
-          <h2>alexandr doe</h2>
-          <p>Manager</p>
         </div>
-      </div>
-      <div class="grid-col grid-col-3">
-        <div class="team-item">
-          <div class="border-img">
-            <div class="window-tabs">
-              <div class="overflow-block">
-                <div class="inform-item">
-                  <div class="social-person clear">
-                    <a href="#" class="circle"><i class="fa fa-twitter"></i></a>
-                    <a href="#" class="circle"><i class="fa fa-facebook"></i></a>
-                    <a href="#" class="circle"><i class="fa fa-skype"></i></a>
-                  </div>
-                </div>
-              </div><img src="images/team/img-team-3.jpg" alt>
-            </div>
-          </div>
-          <h2>Andrea doe</h2>
-          <p>Designer</p>
-        </div>
-      </div>
-      <div class="grid-col grid-col-3">
-        <div class="team-item">
-          <div class="border-img">
-            <div class="window-tabs">
-              <div class="overflow-block">
-                <div class="inform-item">
-                  <div class="social-person clear">
-                    <a href="#" class="circle"><i class="fa fa-twitter"></i></a>
-                    <a href="#" class="circle"><i class="fa fa-facebook"></i></a>
-                    <a href="#" class="circle"><i class="fa fa-skype"></i></a>
-                  </div>
-                </div>
-              </div><img src="images/team/img-team-4.jpg" alt>
-            </div>
-          </div>
-          <h2>Alexandra thornton</h2>
-          <p>Web designer</p>
-        </div>
-      </div>
-      <hr/>
-      <div class="grid-col grid-col-3">
-        <div class="team-item">
-          <div class="border-img">
-            <div class="window-tabs">
-              <div class="overflow-block">
-                <div class="inform-item">
-                  <div class="social-person clear">
-                    <a href="#" class="circle"><i class="fa fa-twitter"></i></a>
-                    <a href="#" class="circle"><i class="fa fa-facebook"></i></a>
-                    <a href="#" class="circle"><i class="fa fa-skype"></i></a>
-                  </div>
-                </div>
-              </div><img src="images/team/img-team-5.jpg" alt>
-            </div>
-          </div>
-          <h2>Robert murphy</h2>
-          <p>Creative Director</p>
-        </div>
-      </div>
-      <div class="grid-col grid-col-3">
-        <div class="team-item">
-          <div class="border-img">
-            <div class="window-tabs">
-              <div class="overflow-block">
-                <div class="inform-item">
-                  <div class="social-person clear">
-                    <a href="#" class="circle"><i class="fa fa-twitter"></i></a>
-                    <a href="#" class="circle"><i class="fa fa-facebook"></i></a>
-                    <a href="#" class="circle"><i class="fa fa-skype"></i></a>
-                  </div>
-                </div>
-              </div><img src="images/team/img-team-6.jpg" alt>
-            </div>
-          </div>
-          <h2>alex doe</h2>
-          <p>Web designer</p>
-        </div>
-      </div>
-      <div class="grid-col grid-col-3">
-        <div class="team-item">
-          <div class="border-img">
-            <div class="window-tabs">
-              <div class="overflow-block">
-                <div class="inform-item">
-                  <div class="social-person clear">
-                    <a href="#" class="circle"><i class="fa fa-twitter"></i></a>
-                    <a href="#" class="circle"><i class="fa fa-facebook"></i></a>
-                    <a href="#" class="circle"><i class="fa fa-skype"></i></a>
-                  </div>
-                </div>
-              </div><img src="images/team/img-team-7.jpg" alt>
-            </div>
-          </div>
-          <h2>luo bloxham</h2>
-          <p>Manager</p>
-        </div>
-      </div>
-      <div class="grid-col grid-col-3">
-        <div class="team-item">
-          <div class="border-img">
-            <div class="window-tabs">
-              <div class="overflow-block">
-                <div class="inform-item">
-                  <div class="social-person clear">
-                    <a href="#" class="circle"><i class="fa fa-twitter"></i></a>
-                    <a href="#" class="circle"><i class="fa fa-facebook"></i></a>
-                    <a href="#" class="circle"><i class="fa fa-skype"></i></a>
-                  </div>
-                </div>
-              </div><img src="images/team/img-team-8.jpg" alt>
-            </div>
-          </div>
-          <h2>kristina collins</h2>
-          <p>Manager</p>
-        </div>
-      </div>
-      <hr/>
-      <div class="grid-col grid-col-3">
-          <div class="team-item">
-            <div class="border-img">
-              <div class="window-tabs">
-                <div class="overflow-block">
-                  <div class="inform-item">
-                    <div class="social-person clear">
-                      <a href="#" class="circle"><i class="fa fa-twitter"></i></a>
-                      <a href="#" class="circle"><i class="fa fa-facebook"></i></a>
-                      <a href="#" class="circle"><i class="fa fa-skype"></i></a>
-                    </div>
-                  </div>
-                </div><img src="images/team/img-team-9.jpg" alt>
-              </div>
-            </div>
-            <h2>Elsie spear</h2>
-            <p>Manager</p>
-        </div>
-      </div>
-      <div class="grid-col grid-col-3">
-          <div class="team-item">
-            <div class="border-img">
-              <div class="window-tabs">
-                <div class="overflow-block">
-                  <div class="inform-item">
-                    <div class="social-person clear">
-                      <a href="#" class="circle"><i class="fa fa-twitter"></i></a>
-                      <a href="#" class="circle"><i class="fa fa-facebook"></i></a>
-                      <a href="#" class="circle"><i class="fa fa-skype"></i></a>
-                    </div>
-                  </div>
-                </div><img src="images/team/img-team-10.jpg" alt>
-              </div>
-            </div>
-            <h2>ann gibson</h2>
-            <p>Interactive Designer</p>
-        </div>
-      </div>
-      <div class="grid-col grid-col-3">
-          <div class="team-item">
-            <div class="border-img">
-              <div class="window-tabs">
-                <div class="overflow-block">
-                  <div class="inform-item">
-                    <div class="social-person clear">
-                      <a href="#" class="circle"><i class="fa fa-twitter"></i></a>
-                      <a href="#" class="circle"><i class="fa fa-facebook"></i></a>
-                      <a href="#" class="circle"><i class="fa fa-skype"></i></a>
-                    </div>
-                  </div>
-                </div><img src="images/team/img-team-11.jpg" alt>
-              </div>
-            </div>
-            <h2>Nikolas Brooten</h2>
-            <p>Designer</p>
-        </div>
-      </div>
-      <div class="grid-col grid-col-3">
-          <div class="team-item">
-            <div class="border-img">
-              <div class="window-tabs">
-                <div class="overflow-block">
-                  <div class="inform-item">
-                    <div class="social-person clear">
-                      <a href="#" class="circle"><i class="fa fa-twitter"></i></a>
-                      <a href="#" class="circle"><i class="fa fa-facebook"></i></a>
-                      <a href="#" class="circle"><i class="fa fa-skype"></i></a>
-                    </div>
-                  </div>
-                </div><img src="images/team/img-team-12.jpg" alt>
-              </div>
-            </div>
-            <h2>alexandr Bloxham</h2>
-            <p>Web Designer</p>
-        </div>
+      {% endfor %}
       </div>
     </div>
-  </div>
   </section>
   <section class="fun-facts parallaxed">
     <div class="parallax-image" data-parallax-left="0.5" data-parallax-top="1.5" data-parallax-scroll-speed="0.5">
-      <img src="images/team/parallax-4.jpg" alt="">
+      <img src={% static "images/team/parallax-4.jpg" %} alt="">
     </div>
     <div class="grid-row wow fadeIn">
       <div class="parallax-content-third">
