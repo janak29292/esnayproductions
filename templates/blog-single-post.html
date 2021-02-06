@@ -20,14 +20,14 @@
 				<div class="grid-row">
 					<img class="splash" src="img/splash.png" alt="">
 					<div class="logo">
-						<a href="index.html"><img src="images/logo.png" alt=""></a>
+						<a href={% url 'home' %}><img src="images/logo.png" alt=""></a>
 					</div>
 					<nav class="nav">
 						<a href="#" class="switcher">
 							<i class="fa fa-bars"></i>
 						</a>
 						<ul class="clear">
-							<li><a href="index.html">Home</a></li>
+							<li><a href={% url 'home' %}>Home</a></li>
 							<li><a href="aboutus.html">About</a></li>
 							<li><a href="team.html">Team</a></li>
 							<li>
@@ -442,7 +442,7 @@
 		<div class="grid-row clear">
 			<div class="footer">
 				<div id="copyright">Copyright<span> Splashes</span> 2016-All Rights Reserved</div>
-				<a href="index.html" class="footer-logo"><img src="images/logo.png" alt=""></a>
+				<a href={% url 'home' %} class="footer-logo"><img src="images/logo.png" alt=""></a>
 				<div class="social">
 					<a href="#"><div class="contact-round"><i class="fa fa-twitter"></i></div></a>
 					<a href="#"><div class="contact-round"><i class="fa fa-facebook"></i></div></a>

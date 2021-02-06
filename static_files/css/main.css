@@ -1055,7 +1055,7 @@ dd{
 	transition:all 0.3s;
 }
 .team-item .overflow-block {
-	background-color: rgba(0, 231, 180, 0.9);
+	/* background-color: rgba(0, 231, 180, 0.9); */
 }
 .large-team .team-item .overflow-block:after,
 .large-team .team-item .overflow-block:before {
